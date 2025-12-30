@@ -18,3 +18,7 @@ function OpenAndCloseFeatures(){
     });
 }
 OpenAndCloseFeatures();
+
+
+
+let form = document.querySelector(".todo-container .addTask form");

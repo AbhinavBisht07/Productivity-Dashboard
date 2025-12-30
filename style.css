@@ -3,6 +3,7 @@
   --sec: #381c0a;
   --tri1: #FEBA17;
   --tri2: #74512D;
+  --red: red;
 }
 
 @font-face {
@@ -89,7 +90,6 @@ main section.fullElem {
   width: 100%;
   background-color: var(--sec);
   padding: 40px;
-  font-size: 30px;
   position: absolute;
   display: none;
 }
@@ -97,7 +97,7 @@ main section.fullElem .back {
   position: absolute;
   right: 5%;
   top: 8%;
-  background-color: rgb(255, 0, 0);
+  background-color: var(--red);
   border-radius: 10px;
   border: none;
   padding: 12px 20px;
@@ -108,4 +108,99 @@ main section.fullElem .back {
 }
 main section.fullElem .back:active {
   scale: 0.5;
+}
+main section.todo-list-fullPage {
+  display: block;
+}
+main section.todo-list-fullPage h2 {
+  font-size: 65px;
+}
+main section.todo-list-fullPage .todo-container {
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.todo-list-fullPage .todo-container .addTask {
+  width: 33%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+main section.todo-list-fullPage .todo-container .addTask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+main section.todo-list-fullPage .todo-container .addTask input {
+  padding: 12px 22px;
+  width: 100%;
+  font-size: 24px;
+  background-color: var(--pri);
+  color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+main section.todo-list-fullPage .todo-container .addTask textarea {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 24px;
+  background-color: var(--pri);
+  color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+main section.todo-list-fullPage .todo-container .addTask button {
+  padding: 12px 22px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: var(--tri1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+main section.todo-list-fullPage .todo-container .addTask button:active {
+  scale: 0.96;
+}
+main section.todo-list-fullPage .todo-container .allTask {
+  width: 65%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  padding: 30px;
+  overflow: auto;
+}
+main section.todo-list-fullPage .todo-container .allTask .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--pri);
+  padding: 15px 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+main section.todo-list-fullPage .todo-container .allTask .task h5 {
+  color: var(--sec);
+  font-size: 26px;
+}
+main section.todo-list-fullPage .todo-container .allTask .task button {
+  padding: 12px 22px;
+  color: var(--pri);
+  background-color: green;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

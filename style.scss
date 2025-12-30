@@ -3,6 +3,7 @@
     --sec: #381c0a;
     --tri1: #FEBA17;
     --tri2: #74512D;
+    --red: red;
 }
 
 @font-face {
@@ -50,7 +51,7 @@ main {
     }
 
     //section.allElems means ki uss section ko target karo jiski class allElems hai
-    section.allElems{
+    section.allElems {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -62,7 +63,7 @@ main {
         align-items: flex-start;
         gap: 30px;
 
-        .elem{
+        .elem {
             position: relative;
             height: 400px;
             width: 265px;
@@ -74,37 +75,38 @@ main {
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
             transition: all ease 0.4s;
 
-            img{
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
 
-            h2{
+            h2 {
                 font-weight: 500;
                 position: absolute;
                 bottom: 3%;
                 right: 6%;
             }
         }
-        .elem:active{
+
+        .elem:active {
             scale: 0.8;
         }
     }
 
-    section.fullElem{
+    section.fullElem {
         height: 100%;
         width: 100%;
         background-color: var(--sec);
         padding: 40px;
-        font-size: 30px;
         position: absolute;
         display: none;
-        .back{
+
+        .back {
             position: absolute;
             right: 5%;
             top: 8%;
-            background-color: rgb(255, 0, 0);
+            background-color: var(--red);
             border-radius: 10px;
             border: none;
             padding: 12px 20px;
@@ -113,8 +115,116 @@ main {
             cursor: pointer;
             transition: 0.3s all ease;
         }
-        .back:active{
+
+        .back:active {
             scale: 0.5;
+            // transform: scaleX(0.9);
         }
     }
+
+    section.todo-list-fullPage {
+        // background-color: red;
+        display: block;
+
+        h2 {
+            font-size: 65px;
+        }
+
+        .todo-container {
+            height: 80%;
+            width: 100%;
+            margin-top: 40px;
+            // background-color: var(--tri2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .addTask {
+                width: 33%;
+                height: 100%;
+                background-color: var(--tri2);
+                border-radius: 20px;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 30px;
+                }
+                input {
+                    padding: 12px 22px;
+                    width: 100%;
+                    font-size: 24px;
+                    background-color: var(--pri);
+                    color: var(--sec);
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    margin-bottom: 20px;
+                }
+                textarea {
+                    padding: 15px 25px;
+                    width: 100%;
+                    font-size: 24px;
+                    background-color: var(--pri);
+                    color: var(--sec);
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    margin-bottom: 20px;
+                }
+                button {
+                    padding: 12px 22px;
+                    width: 100%;
+                    font-size: 24px;
+                    font-weight: 700;
+                    background-color: var(--tri1);
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    transition: 0.3s all ease;
+                }
+                button:active {
+                    scale: 0.96;
+                }
+            }
+
+            .allTask {
+                width: 65%;
+                height: 100%;
+                background-color: var(--tri2);
+                border-radius: 20px;
+                padding: 30px;
+                overflow: auto;
+
+                .task{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    background-color: var(--pri);
+                    padding: 15px 40px;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+
+                    h5{
+                        color: var(--sec);
+                        font-size: 26px;
+                    }
+                    button{
+                        padding: 12px 22px;
+                        color: var(--pri);
+                        background-color: green;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        border: none;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
 }
