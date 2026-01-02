@@ -131,7 +131,7 @@ main {
         }
 
         .todo-container {
-            height: 80%;
+            height: 85%;
             width: 100%;
             margin-top: 40px;
             // background-color: var(--tri2);
@@ -150,45 +150,63 @@ main {
                     flex-direction: column;
                     align-items: flex-start;
                     padding: 30px;
+                    input#task-input {
+                        padding: 12px 22px;
+                        width: 100%;
+                        font-size: 24px;
+                        background-color: var(--pri);
+                        color: var(--sec);
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                    }
+                    textarea {
+                        padding: 15px 25px;
+                        width: 100%;
+                        font-size: 24px;
+                        background-color: var(--pri);
+                        color: var(--sec);
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        margin-bottom: 20px;
+                    }
+                    button {
+                        padding: 12px 22px;
+                        width: 100%;
+                        font-size: 24px;
+                        font-weight: 700;
+                        background-color: var(--tri1);
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        // margin-bottom: 20px;
+                        cursor: pointer;
+                        transition: 0.3s all ease;
+                    }
+                    button:active {
+                        scale: 0.96;
+                    }
+
+                    .mark-imp{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        padding: 10px 10px;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        gap: 20px;
+                        input{
+                            scale: 1.5;
+                        }
+                        label{
+                            font-size: 20px;
+                        }
+                    }
                 }
-                input {
-                    padding: 12px 22px;
-                    width: 100%;
-                    font-size: 24px;
-                    background-color: var(--pri);
-                    color: var(--sec);
-                    border-radius: 5px;
-                    border: none;
-                    outline: none;
-                    margin-bottom: 20px;
-                }
-                textarea {
-                    padding: 15px 25px;
-                    width: 100%;
-                    font-size: 24px;
-                    background-color: var(--pri);
-                    color: var(--sec);
-                    border-radius: 5px;
-                    border: none;
-                    outline: none;
-                    margin-bottom: 20px;
-                }
-                button {
-                    padding: 12px 22px;
-                    width: 100%;
-                    font-size: 24px;
-                    font-weight: 700;
-                    background-color: var(--tri1);
-                    border-radius: 5px;
-                    border: none;
-                    outline: none;
-                    margin-bottom: 20px;
-                    cursor: pointer;
-                    transition: 0.3s all ease;
-                }
-                button:active {
-                    scale: 0.96;
-                }
+
             }
 
             .allTask {
@@ -212,6 +230,24 @@ main {
                     h5{
                         color: var(--sec);
                         font-size: 26px;
+
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 5px;
+
+                        span{
+                            color: var(--pri);
+                            background-color: red;
+                            font-size: 11px;
+                            padding: 4px 8px;
+                            border-radius: 50px;
+                        }
+                        span.true{
+                            opacity: 1;
+                        }
+                        span.false{
+                            opacity: 0;
+                        }
                     }
                     button{
                         padding: 12px 22px;
@@ -221,6 +257,11 @@ main {
                         border-radius: 5px;
                         border: none;
                         font-weight: 700;
+                        cursor: pointer;
+                        transition: 0.3s all ease;
+                    }
+                    button:active {
+                        scale: 0.96;
                     }
                 }
             }
