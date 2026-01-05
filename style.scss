@@ -150,6 +150,7 @@ main {
                     flex-direction: column;
                     align-items: flex-start;
                     padding: 30px;
+
                     input#task-input {
                         padding: 12px 22px;
                         width: 100%;
@@ -162,6 +163,7 @@ main {
                         margin-bottom: 20px;
                         font-weight: 500;
                     }
+
                     textarea {
                         padding: 15px 25px;
                         width: 100%;
@@ -173,6 +175,7 @@ main {
                         outline: none;
                         margin-bottom: 20px;
                     }
+
                     button {
                         padding: 12px 22px;
                         width: 100%;
@@ -186,11 +189,12 @@ main {
                         cursor: pointer;
                         transition: 0.3s all ease;
                     }
+
                     button:active {
                         scale: 0.96;
                     }
 
-                    .mark-imp{
+                    .mark-imp {
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
@@ -198,10 +202,12 @@ main {
                         margin-bottom: 10px;
                         width: 100%;
                         gap: 20px;
-                        input{
+
+                        input {
                             scale: 1.5;
                         }
-                        label{
+
+                        label {
                             font-size: 20px;
                         }
                     }
@@ -217,51 +223,126 @@ main {
                 padding: 30px;
                 overflow: auto;
 
-                .task{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: 100%;
+                .task {
                     background-color: var(--pri);
                     padding: 15px 40px;
                     border-radius: 10px;
                     margin-bottom: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
 
-                    h5{
-                        color: var(--sec);
-                        font-size: 26px;
-
+                    div {
                         display: flex;
-                        align-items: flex-start;
-                        gap: 5px;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
 
-                        span{
+                        h5 {
+                            color: var(--sec);
+                            font-size: 26px;
+
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 5px;
+
+                            span {
+                                color: var(--pri);
+                                background-color: red;
+                                font-size: 11px;
+                                padding: 4px 8px;
+                                border-radius: 50px;
+                            }
+
+                            span.true {
+                                opacity: 1;
+                            }
+
+                            span.false {
+                                opacity: 0;
+                            }
+                        }
+
+                        button {
+                            padding: 12px 22px;
                             color: var(--pri);
-                            background-color: red;
-                            font-size: 11px;
-                            padding: 4px 8px;
-                            border-radius: 50px;
+                            background-color: green;
+                            font-size: 18px;
+                            border-radius: 5px;
+                            border: none;
+                            font-weight: 700;
+                            cursor: pointer;
+                            transition: 0.3s all ease;
                         }
-                        span.true{
-                            opacity: 1;
-                        }
-                        span.false{
-                            opacity: 0;
+
+                        button:active {
+                            scale: 0.96;
                         }
                     }
-                    button{
-                        padding: 12px 22px;
-                        color: var(--pri);
-                        background-color: green;
-                        font-size: 18px;
-                        border-radius: 5px;
-                        border: none;
-                        font-weight: 700;
+
+                    div.details {
+                        margin: auto;
+                        display: flex;
+                        flex-direction: column;
+
+                        // gap: 10px;
+                        gap: 0px;
+                        position: relative;
+
                         cursor: pointer;
-                        transition: 0.3s all ease;
+                        transition: 0.3s all;
+
+                        div.buttons {
+                            padding: 8px 4px 8px 12px;
+                            background-color: #FEBA17;
+                            border-radius: 10px;
+                            width: fit-content;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            span {
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: var(--sec);
+                            }
+
+                            i {
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: var(--sec);
+                                transform: translateY(1px);
+                            }
+
+                            // .down {
+                            //     // display: none;
+                            // }
+
+                            .up {
+                                display: none;
+                            }
+
+                        }
+
+                        div.content {
+                            font-weight: 700;
+                            background-color: var(--tri1);
+                            width: 100%;
+                            // padding: 10px 20px;
+                            border-radius: 10px;
+
+                            // display: none;
+                            opacity: 0;
+                            pointer-events: none;
+                            max-height: 0px;
+                            padding: 0px 20px;
+                            transition: 0.5s all;
+                        }
                     }
-                    button:active {
-                        scale: 0.96;
+
+                    div.details:active {
+                        scale: 0.9;
                     }
                 }
             }

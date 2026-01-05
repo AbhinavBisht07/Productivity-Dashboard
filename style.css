@@ -197,36 +197,41 @@ main section.todo-list-fullPage .todo-container .allTask {
   overflow: auto;
 }
 main section.todo-list-fullPage .todo-container .allTask .task {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
   background-color: var(--pri);
   padding: 15px 40px;
   border-radius: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-main section.todo-list-fullPage .todo-container .allTask .task h5 {
+main section.todo-list-fullPage .todo-container .allTask .task div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main section.todo-list-fullPage .todo-container .allTask .task div h5 {
   color: var(--sec);
   font-size: 26px;
   display: flex;
   align-items: flex-start;
   gap: 5px;
 }
-main section.todo-list-fullPage .todo-container .allTask .task h5 span {
+main section.todo-list-fullPage .todo-container .allTask .task div h5 span {
   color: var(--pri);
   background-color: red;
   font-size: 11px;
   padding: 4px 8px;
   border-radius: 50px;
 }
-main section.todo-list-fullPage .todo-container .allTask .task h5 span.true {
+main section.todo-list-fullPage .todo-container .allTask .task div h5 span.true {
   opacity: 1;
 }
-main section.todo-list-fullPage .todo-container .allTask .task h5 span.false {
+main section.todo-list-fullPage .todo-container .allTask .task div h5 span.false {
   opacity: 0;
 }
-main section.todo-list-fullPage .todo-container .allTask .task button {
+main section.todo-list-fullPage .todo-container .allTask .task div button {
   padding: 12px 22px;
   color: var(--pri);
   background-color: green;
@@ -237,6 +242,53 @@ main section.todo-list-fullPage .todo-container .allTask .task button {
   cursor: pointer;
   transition: 0.3s all ease;
 }
-main section.todo-list-fullPage .todo-container .allTask .task button:active {
+main section.todo-list-fullPage .todo-container .allTask .task div button:active {
   scale: 0.96;
+}
+main section.todo-list-fullPage .todo-container .allTask .task div.details {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+main section.todo-list-fullPage .todo-container .allTask .task div.details div.buttons {
+  padding: 8px 4px 8px 12px;
+  background-color: #FEBA17;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.todo-list-fullPage .todo-container .allTask .task div.details div.buttons span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sec);
+}
+main section.todo-list-fullPage .todo-container .allTask .task div.details div.buttons i {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sec);
+  transform: translateY(1px);
+}
+main section.todo-list-fullPage .todo-container .allTask .task div.details div.buttons .up {
+  display: none;
+}
+main section.todo-list-fullPage .todo-container .allTask .task div.details div.content {
+  font-weight: 700;
+  background-color: var(--tri1);
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0px;
+  padding: 0px 20px;
+  transition: 0.5s all;
+}
+main section.todo-list-fullPage .todo-container .allTask .task div.details:active {
+  scale: 0.9;
 }/*# sourceMappingURL=style.css.map */
