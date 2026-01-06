@@ -1,4 +1,5 @@
-import todoList from "./todolist.js";
+import todoList from "./todoList.js";
+import dailyPlanner from "./dailyPlanner.js";
 
 
 function OpenAndCloseFeatures() {
@@ -23,5 +24,7 @@ function OpenAndCloseFeatures() {
 OpenAndCloseFeatures();
 
 
-
 todoList();
+
+dailyPlanner();
+

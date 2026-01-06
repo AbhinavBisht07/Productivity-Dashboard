@@ -93,6 +93,9 @@ main section.fullElem {
   position: absolute;
   display: none;
 }
+main section.fullElem h2 {
+  font-size: 60px;
+}
 main section.fullElem .back {
   position: absolute;
   right: 5%;
@@ -108,12 +111,6 @@ main section.fullElem .back {
 }
 main section.fullElem .back:active {
   scale: 0.5;
-}
-main section.todo-list-fullPage {
-  display: block;
-}
-main section.todo-list-fullPage h2 {
-  font-size: 65px;
 }
 main section.todo-list-fullPage .todo-container {
   height: 85%;
@@ -291,4 +288,47 @@ main section.todo-list-fullPage .todo-container .allTask .task div.details div.c
 }
 main section.todo-list-fullPage .todo-container .allTask .task div.details:active {
   scale: 0.9;
+}
+main section.daily-planner-fullPage {
+  display: block;
+}
+main section.daily-planner-fullPage .day-planner {
+  background-color: var(--tri2);
+  height: 85%;
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+main section.daily-planner-fullPage .day-planner .day-planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+main section.daily-planner-fullPage .day-planner .day-planner-time p {
+  position: absolute;
+  top: 12%;
+  left: 2%;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--tri1);
+}
+main section.daily-planner-fullPage .day-planner .day-planner-time input {
+  padding: 40px 45px 20px 45px;
+  width: 100%;
+  background-color: var(--sec);
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  font-size: 26px;
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
