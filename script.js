@@ -1,5 +1,6 @@
 import todoList from "./todoList.js";
 import dailyPlanner from "./dailyPlanner.js";
+import motivational from "./MotivationalQuote.js";
 
 
 function OpenAndCloseFeatures() {
@@ -28,3 +29,4 @@ todoList();
 
 dailyPlanner();
 
+motivational();

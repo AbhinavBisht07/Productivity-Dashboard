@@ -289,9 +289,6 @@ main section.todo-list-fullPage .todo-container .allTask .task div.details div.c
 main section.todo-list-fullPage .todo-container .allTask .task div.details:active {
   scale: 0.9;
 }
-main section.daily-planner-fullPage {
-  display: block;
-}
 main section.daily-planner-fullPage .day-planner {
   background-color: var(--tri2);
   height: 85%;
@@ -331,4 +328,71 @@ main section.daily-planner-fullPage .day-planner .day-planner-time input {
   border: none;
   font-size: 26px;
   outline: none;
+}
+main section.motivational-fullPage {
+  display: block;
+  position: relative;
+}
+main section.motivational-fullPage .motivation-container {
+  height: 500px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  background-color: var(--tri1);
+  border-radius: 40px;
+  padding: 17px;
+  box-shadow: 10px 10px 10px #000000;
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper img {
+  width: 80px;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  opacity: 0.2;
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-1 {
+  background-color: var(--sec);
+  padding: 20px;
+  border-radius: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-1 h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-2 {
+  margin-top: 20px;
+  padding: 10px 6%;
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-2 p {
+  font-size: 45px;
+  font-weight: 600;
+  color: var(--sec);
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-3 {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-3 p {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--sec);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */
