@@ -403,80 +403,83 @@ main {
 
     section.motivational-fullPage {
         display: block;
-        position: relative;
 
-        .motivation-container {
-            height: 500px;
-            // width: 550px;
-            width: 80%;
-            // background-color: blue;
+        .motivationContainersContainer{
+            height: 100%;
+            width: 100%;
             display: flex;
             align-items: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50px;
-        }
-
-        .motivation-container {
-            .motivation-wrapper {
-                z-index: 10;
-                position: absolute;
-                // height: 100%;
-                width: 100%;
-                background-color: var(--tri1);
-                border-radius: 40px;
-                padding: 17px;
-                box-shadow: 10px 10px 10px #000000;
-
-                img{
-                    width: 80px;
+            justify-content: center;
+            .motivation-container {
+                height: 500px;
+                // width: 550px;
+                width: 80%;
+                // background-color: blue;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+    
+            .motivation-container {
+                .motivation-wrapper {
+                    z-index: 10;
                     position: absolute;
-                    right: 5%;
-                    top: 2%;
-                    opacity: 0.2;
-                }
-
-                .motivation-1 {
-                    background-color: var(--sec);
-                    padding: 20px;
-                    border-radius: 20px;
-                    width: fit-content;
-
-                    h3 {
-                        font-size: 30px;
-                        font-weight: 500;
+                    // height: 100%;
+                    width: 100%;
+                    background-color: var(--tri1);
+                    border-radius: 40px;
+                    padding: 17px;
+                    box-shadow: 10px 10px 10px #000000;
+    
+                    img{
+                        width: 80px;
+                        position: absolute;
+                        right: 5%;
+                        top: 2%;
+                        opacity: 0.2;
                     }
-                }
-
-                .motivation-2 {
-                    margin-top: 20px;
-                    padding: 10px 6%;
-
-                    p {
-                        font-size: 45px;
-                        font-weight: 600;
-                        color: var(--sec);
-                    }
-                }
-
-                .motivation-3 {
-                    margin-top: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    p {
+    
+                    .motivation-1 {
+                        background-color: var(--sec);
                         padding: 20px;
                         border-radius: 20px;
-                        background-color: var(--sec);
                         width: fit-content;
-                        font-size: 30px;
-                        font-weight: 500;
-                        text-align: right;
+    
+                        h3 {
+                            font-size: 30px;
+                            font-weight: 500;
+                        }
+                    }
+    
+                    .motivation-2 {
+                        margin-top: 20px;
+                        padding: 10px 6%;
+    
+                        p {
+                            font-size: 40px;
+                            font-weight: 600;
+                            color: var(--sec);
+                        }
+                    }
+    
+                    .motivation-3 {
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        p {
+                            padding: 20px;
+                            border-radius: 20px;
+                            background-color: var(--sec);
+                            width: fit-content;
+                            font-size: 30px;
+                            font-weight: 500;
+                            text-align: right;
+                        }
                     }
                 }
             }
         }
+
     }
 }
