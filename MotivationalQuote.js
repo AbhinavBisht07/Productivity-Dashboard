@@ -10,13 +10,21 @@ function motivational(){
     async function fetchQuote(){
         let rawResponse = await fetch('https://quotes-api-self.vercel.app/quote');
         let response = await rawResponse.json();
-        console.log(response);
+        // console.log(response);
+        motivationalQuote.innerHTML = "Fetching a fresh quote . . .";
+        authorName.innerHTML = ". . .";
         setTimeout(() => {
             motivationalQuote.innerHTML = response.quote;
             authorName.innerHTML = `- ${response.author}`;
         }, 1000);
     }
     fetchQuote()
+
+    //for changing quote on button click
+    let changeQuoteBtn = document.querySelector(".motivation-3 button");
+    changeQuoteBtn.addEventListener("click", function(){
+        fetchQuote();
+    })
 }
 
 export default motivational;

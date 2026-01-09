@@ -4,6 +4,8 @@
     --tri1: #FEBA17;
     --tri2: #74512D;
     --red: red;
+    --green: rgb(0, 181, 123);
+    --blue: rgb(0, 181, 157);
 }
 
 @font-face {
@@ -103,7 +105,7 @@ main {
         display: none;
 
         h2 {
-            font-size: 60px;
+            font-size: 50px;
         }
 
         .back {
@@ -402,7 +404,7 @@ main {
 
 
     section.motivational-fullPage {
-        display: block;
+        // display: block;
 
         .motivationContainersContainer{
             height: 100%;
@@ -466,7 +468,19 @@ main {
                         margin-top: 20px;
                         display: flex;
                         align-items: center;
-                        justify-content: flex-end;
+                        justify-content: space-between;
+                        button{
+                            background-color: var(--tri2);
+                            font-size: 20px;
+                            padding: 10px 15px;
+                            border-radius: 20px;
+                            border: none;
+                            cursor: pointer;
+                            transition: 0.3s all;
+                        }
+                        button:active{
+                            scale: 0.75;
+                        }
                         p {
                             padding: 20px;
                             border-radius: 20px;
@@ -474,12 +488,55 @@ main {
                             width: fit-content;
                             font-size: 30px;
                             font-weight: 500;
-                            text-align: right;
                         }
                     }
                 }
             }
         }
 
+    }
+
+
+    section.pomodoro-fullPage{
+        // display: block;
+        position: relative;
+
+        h1.session{
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: var(--green);
+            padding: 10px 20px;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+
+        .pomo-timer{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            h1{
+                font-size: 125px;
+            }
+            button{
+                background-color: var(--tri2);
+                padding: 12px 24px;
+                font-size: 25px;
+                margin: 10px;
+                border-radius: 10px;
+                font-weight: 700;
+                border: none;
+                cursor: pointer;
+                box-shadow: 5px 5px 5px black;
+                transition: 0.2s all;
+            }
+            button:active{
+                scale: 0.95;
+                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+            }
+        }
     }
 }
