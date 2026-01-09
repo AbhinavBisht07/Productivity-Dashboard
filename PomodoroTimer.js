@@ -90,4 +90,5 @@ function pomodoroTimer() {
     pauseBtn.addEventListener("click", pauseTimer);
     resetBtn.addEventListener("click", resetTimer);
 }
-export default pomodoroTimer();
+
+export default pomodoroTimer;

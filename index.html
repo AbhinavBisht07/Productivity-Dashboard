@@ -8,9 +8,11 @@
     <link rel="shortcut icon" href="./apple-touch-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    
 </head>
 
 <body>
+    <!-- <button class="btn1"> click me</button> -->
     <main>
         <!-- <nav></nav> -->
         <section class="allElems">
@@ -44,8 +46,10 @@
 
 
         <section class="fullElem todo-list-fullPage">
-            <h2>Your Personalised Task List</h2>
-            <button class="back">Close</button>
+            <div class="top">
+                <h2>Your Personalised Task List</h2>
+                <button class="back">Close</button>
+            </div>
 
             <div class="todo-container">
                 <div class="addTask">
@@ -79,15 +83,16 @@
 
                             <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum in nemo, consectetur minus voluptatem, alias quisquam deleniti nihil harum, facilis ratione accusantium a error temporibus.</div>
                         </div>
-
                     </div> -->
                 </div>
             </div>
         </section>
 
         <section class="fullElem daily-planner-fullPage">
-            <h2>Plan your Day to be more Productive</h2>
-            <button class="back">Close</button>
+            <div class="top">
+                <h2>Plan your Day to be more Productive</h2>
+                <button class="back">Close</button>
+            </div>
 
             <div class="day-planner">
                 <!-- <div class="day-planner-time">
@@ -104,7 +109,10 @@
 
         <section class="fullElem motivational-fullPage">
             <!-- <h2>Motivational Qote</h2> -->
-            <button class="back">Close</button>
+            <div class="top">
+                <button class="back">Close</button>
+            </div>
+
             <div class="motivationContainersContainer">
                 <div class="motivation-container">
                     <div class="motivation-wrapper">
@@ -117,7 +125,7 @@
                         </div>
                         <div class="motivation-3">
                             <button>Change Quote</button>
-                            <p>.  .  .</p>
+                            <p>. . .</p>
                         </div>
                     </div>
                 </div>
@@ -125,8 +133,10 @@
         </section>
 
         <section class="fullElem pomodoro-fullPage">
-            <h2>Study with me!</h2>
-            <button class="back">Close</button>
+            <div class="top">
+                <h2>Study with me!</h2>
+                <button class="back">Close</button>
+            </div>
 
             <h1 class="session">Work Session</h1>
             <div class="pomo-timer">
@@ -138,12 +148,94 @@
         </section>
 
         <section class="fullElem daily-goals-fullPage">
-            <h2>Daily Goals</h2>
-            <button class="back">Close</button>
+            <div class="top">
+                <div>
+                    <h2>No timeslots No scheduling . . .</h2>
+                    <h3>PURE INTENT !</h3>
+                </div>
+                <button class="back">Close</button>
+            </div>
+
+            <div class="daily-goals">
+                <!-- <div class="main-goal"></div>
+
+                <div class="goals"></div> -->
+                <div class="addGoal">
+                    <form>
+                        <input id="goal-input" type="text" placeholder="Enter Goal" required>
+                        <!-- <textarea placeholder="Enter Details" name="" id="" cols="30" rows="9"></textarea> -->
+                        <div class="mark-main">
+                            <input type="checkbox" name="" id="tick">
+                            <label for="tick">Mark as THE MAIN goal !</label>
+                        </div>
+                        <button>Add Goal</button>
+                    </form>
+                </div>
+                <div class="allGoals">
+                    <!-- <div class="task">
+                        <div>
+                            <h5>
+                                Gym Jao
+                            </h5>
+                            <div>
+                                <button class="goalAchievedBtn">Goal Achieved</button>
+                                <button class="removeBtn">Remove</button>
+                            </div>
+                        </div>
+
+                        <div class="details">
+                            <div class="buttons">
+                                <span>Details</span>
+
+                                <i class="down ri-arrow-down-s-line"></i>
+                                <i class="up ri-arrow-up-s-line"></i>
+                            </div>
+
+                            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum in nemo, consectetur minus voluptatem, alias quisquam deleniti nihil harum, facilis ratione accusantium a error temporibus.</div>
+                        </div>
+
+                    </div> -->
+                </div>
         </section>
     </main>
 
     <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
 
 </html>
+
+<!-- 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+✅ Whom should you credit?
+You should credit the creator of the library, not the CDN.
+
+Library name: canvas-confetti
+
+Creator: Matthew Esch (GitHub handle: catdad)
+
+License: MIT (means attribution is appreciated, not legally forced, but it’s best practice)
+
+👉 You do NOT need to credit jsDelivr — it’s just hosting the file.
+
+✅ Best & Clean Ways to Credit (Choose One)
+🔹 Option 1: Simple Footer Credit (Most Common)
+html
+Copy code
+<footer>
+  Effects powered by <a href="https://github.com/catdad/canvas-confetti" target="_blank">
+    canvas-confetti
+  </a>
+</footer>
+✔ Clean
+✔ Professional
+✔ Portfolio-friendly
+
+🔹 Option 2: Credit the Creator Explicitly (Even Better)
+html
+Copy code
+<footer>
+  Confetti effect by 
+  <a href="https://github.com/catdad" target="_blank">Matthew Esch</a> 
+  (<a href="https://github.com/catdad/canvas-confetti" target="_blank">canvas-confetti</a>)
+</footer> -->

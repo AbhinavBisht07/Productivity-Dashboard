@@ -2,6 +2,7 @@ import todoList from "./todoList.js";
 import dailyPlanner from "./dailyPlanner.js";
 import motivational from "./MotivationalQuote.js";
 import pomodoroTimer from "./PomodoroTimer.js";
+import dailyGoals from "./DailyGoals.js";
 
 
 function OpenAndCloseFeatures() {
@@ -34,3 +35,4 @@ motivational();
 
 pomodoroTimer();
 
+dailyGoals();

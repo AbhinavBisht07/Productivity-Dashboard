@@ -5,6 +5,7 @@
   --tri2: #74512D;
   --red: red;
   --green: rgb(0, 181, 123);
+  --lightGreen: rgb(0, 90, 0);
   --blue: rgb(0, 181, 157);
 }
 
@@ -95,17 +96,19 @@ main section.fullElem {
   position: absolute;
   display: none;
 }
-main section.fullElem h2 {
-  font-size: 50px;
+main section.fullElem .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-main section.fullElem .back {
-  position: absolute;
-  right: 5%;
-  top: 8%;
+main section.fullElem .top h2 {
+  font-size: 40px;
+}
+main section.fullElem .top .back {
   background-color: var(--red);
   border-radius: 10px;
   border: none;
-  padding: 12px 20px;
+  padding: 9px 16px;
   font-size: 22px;
   font-weight: 700;
   cursor: pointer;
@@ -331,6 +334,9 @@ main section.daily-planner-fullPage .day-planner .day-planner-time input {
   font-size: 26px;
   outline: none;
 }
+main section.motivational-fullPage .top .back {
+  margin-left: auto;
+}
 main section.motivational-fullPage .motivationContainersContainer {
   height: 100%;
   width: 100%;
@@ -446,4 +452,161 @@ main section.pomodoro-fullPage .pomo-timer button {
 main section.pomodoro-fullPage .pomo-timer button:active {
   scale: 0.95;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+main section.daily-goals-fullPage {
+  display: block;
+}
+main section.daily-goals-fullPage .top div {
+  text-align: center;
+}
+main section.daily-goals-fullPage .top div h2 {
+  font-size: 30px;
+}
+main section.daily-goals-fullPage .top div h3 {
+  margin-top: 10px;
+  font-size: 50px;
+}
+main section.daily-goals-fullPage .daily-goals {
+  height: 75%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal {
+  width: 33%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal form input#goal-input {
+  padding: 12px 22px;
+  width: 100%;
+  font-size: 24px;
+  background-color: var(--pri);
+  color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal form button {
+  padding: 12px 22px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: var(--tri1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal form button:active {
+  scale: 0.96;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal form .mark-main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  gap: 20px;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal form .mark-main input {
+  scale: 1.5;
+}
+main section.daily-goals-fullPage .daily-goals .addGoal form .mark-main label {
+  font-size: 20px;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals {
+  width: 65%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  padding: 30px;
+  overflow: auto;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal {
+  background-color: var(--pri);
+  padding: 24px 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal span {
+  color: var(--pri);
+  background-color: red;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.3s all;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal span:hover {
+  scale: 1.1;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal span.true {
+  opacity: 1;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal span.false {
+  opacity: 0;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div h5 {
+  color: var(--sec);
+  font-size: 26px;
+  width: 72%;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div .goalAchievedClass {
+  color: green;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: green;
+  opacity: 0.3;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div div {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 5px;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div div button {
+  padding: 12px 22px;
+  color: var(--pri);
+  background-color: green;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div div button:active {
+  scale: 0.7;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div div .removeBtn {
+  background-color: var(--red);
 }/*# sourceMappingURL=style.css.map */
