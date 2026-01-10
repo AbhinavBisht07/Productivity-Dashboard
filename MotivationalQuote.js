@@ -10,7 +10,7 @@ function motivational(){
     async function fetchQuote(){
         let rawResponse = await fetch('https://quotes-api-self.vercel.app/quote');
         let response = await rawResponse.json();
-        // console.log(response);
+
         motivationalQuote.innerHTML = "Fetching a fresh quote . . .";
         authorName.innerHTML = ". . .";
         setTimeout(() => {

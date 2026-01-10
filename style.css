@@ -1,7 +1,7 @@
 :root {
   --pri: #F8F4E1;
   --sec: #381c0a;
-  --tri1: #FEBA17;
+  --tri1: #eea700;
   --tri2: #74512D;
   --red: red;
   --green: rgb(0, 181, 123);
@@ -453,17 +453,12 @@ main section.pomodoro-fullPage .pomo-timer button:active {
   scale: 0.95;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
-main section.daily-goals-fullPage {
-  display: block;
-}
-main section.daily-goals-fullPage .top div {
-  text-align: center;
-}
 main section.daily-goals-fullPage .top div h2 {
   font-size: 30px;
 }
 main section.daily-goals-fullPage .top div h3 {
   margin-top: 10px;
+  margin-left: 250px;
   font-size: 50px;
 }
 main section.daily-goals-fullPage .daily-goals {
@@ -476,7 +471,6 @@ main section.daily-goals-fullPage .daily-goals {
 }
 main section.daily-goals-fullPage .daily-goals .addGoal {
   width: 33%;
-  height: 100%;
   background-color: var(--tri2);
   border-radius: 20px;
 }
@@ -536,6 +530,9 @@ main section.daily-goals-fullPage .daily-goals .allGoals {
   padding: 30px;
   overflow: auto;
 }
+main section.daily-goals-fullPage .daily-goals .allGoals h2 {
+  color: var(--sec);
+}
 main section.daily-goals-fullPage .daily-goals .allGoals .goal {
   background-color: var(--pri);
   padding: 24px 40px;
@@ -567,6 +564,39 @@ main section.daily-goals-fullPage .daily-goals .allGoals .goal span.true {
 }
 main section.daily-goals-fullPage .daily-goals .allGoals .goal span.false {
   opacity: 0;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--sec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: 0.5s all ease;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert p {
+  font-size: 30px;
+  font-weight: 700;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert .alertCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: green;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert .alertCloseBtn:active {
+  scale: 0.4;
 }
 main section.daily-goals-fullPage .daily-goals .allGoals .goal div {
   display: flex;
