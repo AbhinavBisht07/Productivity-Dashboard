@@ -150,6 +150,8 @@ function dailyGoals() {
     }
     renderGoals();
 
+
+    
     // Data storing and goal rendering on form submission
     let form = document.querySelector(".daily-goals .addGoal form");
     let goalInput = document.querySelector(".addGoal form #goal-input");

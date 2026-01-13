@@ -13,11 +13,11 @@
 // to output "0005" hota
 
 function pomodoroTimer() {
-    let timer = document.querySelector(".pomo-timer h1");
+    let session = document.querySelector(".pomodoro-fullPage h1.session");
+    let timer = document.querySelector(".pomo-timer h1.timer");
     let startBtn = document.querySelector(".pomo-timer .start-timer");
     let pauseBtn = document.querySelector(".pomo-timer .pause-timer");
     let resetBtn = document.querySelector(".pomo-timer .reset-timer");
-    let session = document.querySelector(".pomodoro-fullPage .session");
 
     let isWorkSession = true;
 
@@ -51,9 +51,9 @@ function pomodoroTimer() {
                     timer.innerHTML = "05:00";
                     totalSeconds = 5*60
                     session.innerHTML = "Little Break";
-                    session.style.backgroundColor = 'var(--blue)';
+                    session.style.backgroundColor = 'var(--darkBlue)';
                 }
-            }, 1000);
+            }, 1);
         }
         else{
             timerInterval = setInterval(() => {
@@ -67,9 +67,9 @@ function pomodoroTimer() {
                     timer.innerHTML = "25:00";
                     totalSeconds = 25*60;
                     session.innerHTML = "Work Session";
-                    session.style.backgroundColor = 'var(--green)';
+                    session.style.backgroundColor = 'var(--darkGreen)';
                 }
-            }, 1000);
+            }, 1);
         }
 
 

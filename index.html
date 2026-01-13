@@ -8,39 +8,68 @@
     <link rel="shortcut icon" href="./apple-touch-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
-    
+
 </head>
 
 <body>
     <!-- <button class="btn1"> click me</button> -->
     <main>
-        <!-- <nav></nav> -->
+        <nav>
+            <div class="nav-in">
+                <h2>Productivity Dashboard</h2>
+                <div>
+                    <button class="changeTheme">Change Theme <i class="ri-sun-line"></i></button>
+                    <button class="credits">Credits</button>
+                </div>
+            </div>
+        </nav>
+
         <section class="allElems">
-            <div class="todo elem" id="0">
-                <img src="https://images.pexels.com/photos/9454915/pexels-photo-9454915.jpeg" alt="">
-                <h2>To Do List</h2>
-            </div>
-            <div class="daily elem" id="1">
-                <img src="https://images.unsplash.com/photo-1643139863038-7355941e9e89?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="">
-                <h2>Day planner</h2>
-            </div>
-            <div class="moti elem" id="2">
-                <img src="https://images.unsplash.com/photo-1651601787600-40ad979813ac?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="">
-                <h2>Motivation</h2>
-            </div>
-            <div class="pomo elem" id="3">
-                <img src="https://images.unsplash.com/photo-1658988958815-f446d29437fe?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="">
-                <h2>Pomodoro timer</h2>
-            </div>
-            <div class="goals elem" id="4">
-                <img src="https://images.unsplash.com/photo-1637140945341-f28ada987326?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="">
-                <h2>
-                    Daily Goals
-                </h2>
+            <header>
+                <!-- <h1>Hello Champion !</h1> -->
+                <div class="header1">
+                    <h4></h4>
+                    <h2>Fetching date . . .</h2>
+                    <h3>Please Wait ...</h3>
+                </div>
+                <div class="header2">
+                    <h2></h2>
+                    <h3></h3>
+                    <h4 class="precipitation"></h4>
+                    <h4 class="humidity"></h4>
+                    <h4 class="wind"></h4>
+                </div>
+
+
+            </header>
+
+            <div class="allFeatures">
+                <div class="todo elem" id="0">
+                    <img src="https://images.pexels.com/photos/9454915/pexels-photo-9454915.jpeg" alt="">
+                    <h2>To Do List</h2>
+                </div>
+                <div class="daily elem" id="1">
+                    <img src="https://images.unsplash.com/photo-1643139863038-7355941e9e89?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Day planner</h2>
+                </div>
+                <div class="moti elem" id="2">
+                    <img src="https://images.unsplash.com/photo-1651601787600-40ad979813ac?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Motivation</h2>
+                </div>
+                <div class="pomo elem" id="3">
+                    <img src="https://images.unsplash.com/photo-1658988958815-f446d29437fe?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>Pomodoro timer</h2>
+                </div>
+                <div class="goals elem" id="4">
+                    <img src="https://images.unsplash.com/photo-1637140945341-f28ada987326?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h2>
+                        Daily Goals
+                    </h2>
+                </div>
             </div>
         </section>
 
@@ -64,27 +93,28 @@
                         <button>Add Task</button>
                     </form>
                 </div>
-                <div class="allTask">
-                    <!-- <div class="task">
-                        <div>
-                            <h5>
-                                Gym Jao
-                            </h5>
-                            <button>Mark as completed</button>
-                        </div>
 
-                        <div class="details">
-                            <div class="buttons">
-                                <span>Details</span>
-
-                                <i class="down ri-arrow-down-s-line"></i>
-                                <i class="up ri-arrow-up-s-line"></i>
+                    <div class="allTask">
+                        <!-- <div class="task">
+                            <div>
+                                <h5>
+                                    Gym Jao
+                                </h5>
+                                <button>Mark as completed</button>
                             </div>
-
-                            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum in nemo, consectetur minus voluptatem, alias quisquam deleniti nihil harum, facilis ratione accusantium a error temporibus.</div>
-                        </div>
-                    </div> -->
-                </div>
+    
+                            <div class="details">
+                                <div class="buttons">
+                                    <span>Details</span>
+    
+                                    <i class="down ri-arrow-down-s-line"></i>
+                                    <i class="up ri-arrow-up-s-line"></i>
+                                </div>
+    
+                                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum in nemo, consectetur minus voluptatem, alias quisquam deleniti nihil harum, facilis ratione accusantium a error temporibus.</div>
+                            </div>
+                        </div> -->
+                    </div>
             </div>
         </section>
 
@@ -138,9 +168,9 @@
                 <button class="back">Close</button>
             </div>
 
-            <h1 class="session">Work Session</h1>
             <div class="pomo-timer">
-                <h1>25:00</h1>
+                <h1 class="session">Work Session</h1>
+                <h1 class="timer">25:00</h1>
                 <button class="start-timer">Start</button>
                 <button class="pause-timer">Pause</button>
                 <button class="reset-timer">Reset</button>
