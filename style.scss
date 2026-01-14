@@ -121,46 +121,86 @@ main {
             background-size: cover;
             margin-bottom: 20px;
             border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             padding: 20px 60px 20px 60px;
 
-            .header1 {
-                h4 {
-                    font-size: 30px;
-                }
-
-                h2 {
-                    font-size: 80px;
-                    margin-bottom: 30px;
-                }
-
-                h3 {
-                    font-size: 40px;
-                    font-weight: 500;
-                    opacity: 0.8;
-                }
-            }
-
-            .header2 {
-                h2 {
-                    font-size: 60px;
-                }
-
-                h3 {
-                    font-size: 35px;
-                    font-weight: 500;
-                    margin-top: -5px;
-                    margin-bottom: 30px;
-                }
-
-                h4 {
+            .locationSearch {
+                display: flex;
+                gap: 5px;
+                flex-wrap: wrap;
+                input.locationInput {
+                    width: 380px;
                     font-size: 20px;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    background-color: var(--pri);
+                    color: var(--sec);
                     font-weight: 500;
-                    opacity: 0.8;
+                }
+
+                button.locationSubmitBtn {
+                    padding: 10px 20px;
+                    width: fit-content;
+                    font-size: 20px;
+                    font-weight: 700;
+                    background-color: var(--tri1);
+                    color: var(--white);
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    // margin-bottom: 20px;
+                    cursor: pointer;
+                    transition: 0.3s all ease;
+                }
+                button.locationSubmitBtn:active{
+                    scale: 0.9;
                 }
             }
+
+            .mainContent {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .header1 {
+                    h4 {
+                        font-size: 30px;
+                    }
+
+                    h2 {
+                        font-size: 80px;
+                        margin-bottom: 30px;
+                    }
+
+                    h3 {
+                        font-size: 40px;
+                        font-weight: 500;
+                        opacity: 0.8;
+                    }
+                }
+
+                .header2 {
+                    h2 {
+                        font-size: 60px;
+                    }
+
+                    h3 {
+                        font-size: 35px;
+                        font-weight: 500;
+                        margin-top: -5px;
+                        margin-bottom: 30px;
+                    }
+
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 500;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
         }
 
         .allFeatures {
@@ -202,18 +242,22 @@ main {
         }
 
     }
+
     section.allElems::-webkit-scrollbar {
         width: 5px;
         height: 10px;
     }
+
     section.allElems::-webkit-scrollbar-track {
         background: var(--white);
         border-radius: 10px;
     }
+
     section.allElems::-webkit-scrollbar-thumb {
         background: #888;
         border-radius: 10px;
     }
+
     section.allElems::-webkit-scrollbar-thumb:hover {
         background: #555;
     }
@@ -962,14 +1006,17 @@ main {
                 width: 8px;
                 height: 5px;
             }
+
             .allGoals::-webkit-scrollbar-track {
                 border-radius: 10px;
                 background-color: var(--white);
             }
+
             .allGoals::-webkit-scrollbar-thumb {
                 border-radius: 10px;
                 background-color: #888;
             }
+
             .allGoals::-webkit-scrollbar-thumb:hover {
                 background-color: var(#555);
             }

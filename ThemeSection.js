@@ -188,4 +188,4 @@ changeThemeBtn.addEventListener("click", function () {
 applyTheme(Number(localStorage.getItem("storedIndex")));
 }
 
-export default themeSection();
+export default themeSection;

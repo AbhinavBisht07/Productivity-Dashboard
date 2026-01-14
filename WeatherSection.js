@@ -1,8 +1,6 @@
 function weatherSection() {
-    // site :- weatherapi.com (https://www.weatherapi.com)
-    let apiKey = "2b0933b21c1c42b8b7f84623261101";
 
-    let data = null;
+    let apiKey = "d60508e0f43c4eeb9c1123333261301";
 
     let header1Time = document.querySelector('.header1 h2');
     let header1Date = document.querySelector('.header1 h4');
@@ -14,50 +12,67 @@ function weatherSection() {
     let humidity = document.querySelector('.header2 .humidity');
     let wind = document.querySelector('.header2 .wind');
 
-    async function weatherApiCall(apiKey, city) {
-        let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
-        let data = await response.json();
-        // console.log(data);
+    let locationInput = document.querySelector(".locationInput");
+    let locationSubmitBtn = document.querySelector(".locationSubmitBtn");
 
-        header1Location.innerHTML = `${data.location.name} (${data.location.region})`;
+    let location = localStorage.getItem("location") || "";
 
-        header2Temperature.innerHTML = `${data.current.temp_c}°C`;
-        header2Condition.innerHTML = `${data.current.condition.text}`;
-        precipitation.innerHTML = `Precipitation: ${data.current.precip_mm}mm`;
-        humidity.innerHTML = `Humidity: ${data.current.humidity}%`;
-        wind.innerHTML = `Wind: ${data.current.wind_kph} km/h`;
+    // WEATHER API 
+    async function weatherApiCall(apiKey, location) {
+
+        if (!location) {
+            header1Location.innerHTML = "Enter a location";
+            return;
+        }
+
+        try {
+            let response = await fetch(
+                `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`
+            );
+
+            let data = await response.json();
+
+            header1Location.innerHTML = `${data.location.name} (${data.location.region})`;
+            header2Temperature.innerHTML = `${data.current.temp_c}°C`;
+            header2Condition.innerHTML = data.current.condition.text;
+            precipitation.innerHTML = `Precipitation: ${data.current.precip_mm} mm`;
+            humidity.innerHTML = `Humidity: ${data.current.humidity}%`;
+            wind.innerHTML = `Wind: ${data.current.wind_kph} km/h`;
+
+        } catch (error) {
+            header1Location.innerHTML = "Location not found ❌";
+            console.error(error);
+        }
     }
-    weatherApiCall(apiKey, "Dehradun");
 
+    // BUTTON
+    locationSubmitBtn.addEventListener("click", function () {
+        location = locationInput.value.trim();
+        if (!location) return;
 
-    let date = null;
+        localStorage.setItem("location", location);
+        weatherApiCall(apiKey, location);
+        locationInput.value = "";
+    });
 
-    const totalDaysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
+    //  DATE & TIME 
+    const totalDaysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
     function dateAndTime() {
-        date = new Date(); //Date() is an inbuilt method that gives us Date & Time.
-        // console.log(date);
-        let day = totalDaysOfWeek[date.getDay()];
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-        let seconds = date.getSeconds();
-        let datee = date.getDate();
-        let month = months[date.getMonth()];
-        let year = date.getFullYear();
-        // console.log(day);
-
-        header1Date.innerHTML = `${datee} ${month}, ${year}`;
-
-        header1Time.innerHTML = `${day}, ${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")} ${hours < 12 ? "am" : "pm"}`
+        const date = new Date();
+        header1Date.innerHTML = `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
+        header1Time.innerHTML =
+            `${totalDaysOfWeek[date.getDay()]}, ${String(date.getHours()).padStart(2,"0")}:${String(date.getMinutes()).padStart(2,"0")}:${String(date.getSeconds()).padStart(2,"0")}`;
     }
 
-    //to update time every one second :-
-    setInterval(() => {
-        dateAndTime();
-    }, 1000);
+    setInterval(dateAndTime, 1000);
+    dateAndTime();
+
+    // INITIAL LOAD
+    if (location) {
+        weatherApiCall(apiKey, location);
+    }
 }
 
 export default weatherSection;

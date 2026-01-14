@@ -93,33 +93,69 @@ main section.allElems header {
   background-size: cover;
   margin-bottom: 20px;
   border-radius: 15px;
+  padding: 20px 60px 20px 60px;
+}
+main section.allElems header .locationSearch {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+main section.allElems header .locationSearch input.locationInput {
+  width: 380px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: var(--pri);
+  color: var(--sec);
+  font-weight: 500;
+}
+main section.allElems header .locationSearch button.locationSubmitBtn {
+  padding: 10px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--tri1);
+  color: var(--white);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+main section.allElems header .locationSearch button.locationSubmitBtn:active {
+  scale: 0.9;
+}
+main section.allElems header .mainContent {
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px 20px 60px;
 }
-main section.allElems header .header1 h4 {
+main section.allElems header .mainContent .header1 h4 {
   font-size: 30px;
 }
-main section.allElems header .header1 h2 {
+main section.allElems header .mainContent .header1 h2 {
   font-size: 80px;
   margin-bottom: 30px;
 }
-main section.allElems header .header1 h3 {
+main section.allElems header .mainContent .header1 h3 {
   font-size: 40px;
   font-weight: 500;
   opacity: 0.8;
 }
-main section.allElems header .header2 h2 {
+main section.allElems header .mainContent .header2 h2 {
   font-size: 60px;
 }
-main section.allElems header .header2 h3 {
+main section.allElems header .mainContent .header2 h3 {
   font-size: 35px;
   font-weight: 500;
   margin-top: -5px;
   margin-bottom: 30px;
 }
-main section.allElems header .header2 h4 {
+main section.allElems header .mainContent .header2 h4 {
   font-size: 20px;
   font-weight: 500;
   opacity: 0.8;
