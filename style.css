@@ -281,7 +281,7 @@ main section.todo-list-fullPage .todo-container .addTask form input#task-input {
   font-weight: 500;
 }
 main section.todo-list-fullPage .todo-container .addTask form textarea {
-  padding: 15px 25px;
+  padding: 12px 22px;
   width: 100%;
   font-size: 24px;
   background-color: var(--pri);
@@ -874,4 +874,542 @@ main section.credits-fullPage .credits::-webkit-scrollbar-thumb {
 }
 main section.credits-fullPage .credits::-webkit-scrollbar-thumb:hover {
   background-color: var(#555);
+}
+
+@media screen and (max-width: 600px) {
+  main nav {
+    width: 90%;
+  }
+  main nav .nav-in {
+    padding: 20px 15px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  main nav .nav-in h2 {
+    font-size: 24px;
+  }
+  main nav .nav-in div {
+    width: 100%;
+    justify-content: space-between;
+  }
+  main nav .nav-in div button {
+    font-size: 15px;
+  }
+  main section.allElems {
+    padding-top: 160px;
+  }
+  main section.allElems header {
+    padding: 20px 15px 20px 15px;
+  }
+  main section.allElems header .locationSearch input.locationInput {
+    width: 250px;
+    font-size: 14px;
+  }
+  main section.allElems header .locationSearch button.locationSubmitBtn {
+    font-size: 14px;
+  }
+  main section.allElems header .mainContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+  main section.allElems header .mainContent .header1 {
+    width: 100%;
+  }
+  main section.allElems header .mainContent .header1 h4 {
+    font-size: 20px;
+  }
+  main section.allElems header .mainContent .header1 h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  main section.allElems header .mainContent .header1 h3 {
+    font-size: 30px;
+  }
+  main section.allElems header .mainContent .header2 {
+    width: 100%;
+  }
+  main section.allElems header .mainContent .header2 h2 {
+    font-size: 40px;
+  }
+  main section.allElems header .mainContent .header2 h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  main section.allElems header .mainContent .header2 h4 {
+    font-size: 15px;
+  }
+  main section.allElems .allFeatures .elem {
+    width: 100%;
+  }
+  main section.fullElem {
+    height: auto;
+    padding: 20px;
+  }
+  main section.fullElem .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  main section.fullElem .top h2 {
+    font-size: 25px;
+  }
+  main section.fullElem .top .back {
+    font-size: 18px;
+    margin-left: auto;
+  }
+  main section.todo-list-fullPage .todo-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  main section.todo-list-fullPage .todo-container .addTask {
+    width: 100%;
+  }
+  main section.todo-list-fullPage .todo-container .addTask form {
+    padding: 15px;
+  }
+  main section.todo-list-fullPage .todo-container .addTask form input#task-input {
+    padding: 10px 16px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  main section.todo-list-fullPage .todo-container .addTask form textarea {
+    padding: 10px 16px;
+    height: 200px;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  main section.todo-list-fullPage .todo-container .addTask form button {
+    padding: 10px 16px;
+    font-size: 18px;
+  }
+  main section.todo-list-fullPage .todo-container .addTask form .mark-imp {
+    margin-bottom: 0px;
+    gap: 10px;
+  }
+  main section.todo-list-fullPage .todo-container .addTask form .mark-imp label {
+    font-size: 16px;
+  }
+  main section.todo-list-fullPage .todo-container .allTask {
+    width: 100%;
+    padding: 15px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  main section.todo-list-fullPage .todo-container .allTask .task {
+    padding: 15px 15px;
+    gap: 30px;
+  }
+  main section.todo-list-fullPage .todo-container .allTask .task div {
+    flex-direction: column;
+    gap: 15px;
+  }
+  main section.todo-list-fullPage .todo-container .allTask .task div h5 {
+    font-size: 20px;
+  }
+  main section.todo-list-fullPage .todo-container .allTask .task div button {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+  main section.todo-list-fullPage .todo-container .allTask .task div.details div.buttons {
+    padding: 8px 12px 8px 12px;
+    flex-direction: row;
+  }
+  main section.todo-list-fullPage .todo-container .allTask .task div.details div.buttons span {
+    font-size: 16px;
+  }
+  main section.todo-list-fullPage .todo-container .allTask .task div.details div.buttons i {
+    font-size: 16px;
+  }
+  main section.daily-planner-fullPage .day-planner {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px;
+  }
+  main section.daily-planner-fullPage .day-planner .day-planner-time {
+    width: 100%;
+  }
+  main section.daily-planner-fullPage .day-planner .day-planner-time p {
+    left: 15px;
+    font-size: 14px;
+  }
+  main section.daily-planner-fullPage .day-planner .day-planner-time input {
+    font-size: 18px;
+  }
+  main section.motivational-fullPage .motivation-container {
+    margin-top: 50px;
+    align-items: flex-start;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper {
+    width: 100%;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper img {
+    width: 30px;
+    right: 10px;
+    top: 45px;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-1 {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-1 h3 {
+    font-size: 16px;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-2 {
+    margin-top: 10px;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-2 p {
+    font-size: 18px;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-3 {
+    margin-top: 10px;
+    flex-direction: column-reverse;
+    gap: 15px;
+    align-items: flex-end;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-3 button {
+    font-size: 14px;
+  }
+  main section.motivational-fullPage .motivation-container .motivation-wrapper .motivation-3 p {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  main section.pomodoro-fullPage {
+    height: 100%;
+  }
+  main section.pomodoro-fullPage .pomo-timer {
+    width: 90%;
+    background-color: var(--tri1);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  main section.pomodoro-fullPage .pomo-timer h1.session {
+    background-color: var(--darkGreen);
+    padding: 10px 20px;
+    font-size: 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  main section.pomodoro-fullPage .pomo-timer h1.timer {
+    font-size: 125px;
+    font-size: 80px;
+  }
+  main section.pomodoro-fullPage .pomo-timer button {
+    background-color: var(--tri2);
+    padding: 12px 24px;
+    font-size: 25px;
+    font-size: 14px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.442);
+    transition: 0.2s all;
+  }
+  main section.pomodoro-fullPage .pomo-timer button:active {
+    scale: 0.95;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  main section.daily-goals-fullPage .top div h2 {
+    font-size: 30px;
+    font-size: 16px;
+  }
+  main section.daily-goals-fullPage .top div h3 {
+    margin-top: 10px;
+    margin-left: 250px;
+    margin-left: 80px;
+    font-size: 50px;
+    font-size: 30px;
+  }
+  main section.daily-goals-fullPage .daily-goals {
+    height: 75%;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal {
+    width: 33%;
+    width: 100%;
+    background-color: var(--tri2);
+    border-radius: 20px;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    padding: 15px;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal form input#goal-input {
+    padding: 12px 22px;
+    padding: 10px 16px;
+    width: 100%;
+    font-size: 24px;
+    font-size: 20px;
+    background-color: var(--pri);
+    color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal form button {
+    padding: 12px 22px;
+    padding: 10px 16px;
+    width: 100%;
+    font-size: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--tri1);
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s all ease;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal form button:active {
+    scale: 0.96;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal form .mark-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    gap: 20px;
+    gap: 10px;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal form .mark-main input {
+    scale: 1.5;
+  }
+  main section.daily-goals-fullPage .daily-goals .addGoal form .mark-main label {
+    font-size: 20px;
+    font-size: 16px;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals {
+    width: 65%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--tri2);
+    padding: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: auto;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals h2 {
+    color: var(--sec);
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal {
+    background-color: var(--pri);
+    padding: 24px 40px;
+    padding: 30px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal span {
+    color: var(--white);
+    background-color: var(--red);
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s all;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal span:hover {
+    scale: 1.1;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal span.true {
+    opacity: 1;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal span.false {
+    opacity: 0;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--sec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: 0.5s all ease;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert p {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert .alertCloseBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s all ease;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal .alert .alertCloseBtn:active {
+    scale: 0.4;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal div h5 {
+    color: var(--sec);
+    font-size: 26px;
+    font-size: 20px;
+    width: 72%;
+    width: 100%;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal div .goalAchievedClass {
+    color: var(--green);
+    text-decoration-line: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--green);
+    opacity: 0.3;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal div div {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    gap: 5px;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal div div button {
+    padding: 10px 14px;
+    color: var(--pri);
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s all ease;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal div div button:active {
+    scale: 0.7;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals .goal div div .removeBtn {
+    background-color: var(--red);
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--white);
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #888;
+  }
+  main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar-thumb:hover {
+    background-color: var(#555);
+  }
+  main section.credits-fullPage .credits {
+    background-color: var(--tri2);
+    height: 80%;
+    width: 100%;
+    margin-top: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 30px;
+    padding: 10px;
+    display: flex;
+    align-self: flex-start;
+    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
+  }
+  main section.credits-fullPage .credits .credit {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main section.credits-fullPage .credits .credit p {
+    font-weight: 700;
+    color: var(--tri1);
+    padding: 20px 45px 20px 45px;
+    padding: 15px 20px 15px 20px;
+    width: 100%;
+    background-color: var(--sec);
+    color: var(--pri);
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    font-size: 12px;
+    outline: none;
+    line-height: 40px;
+  }
+  main section.credits-fullPage .credits .credit p a {
+    font-size: 30px;
+    font-size: 14px;
+    color: var(--tri1);
+  }
+  main section.credits-fullPage .credits::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+  }
+  main section.credits-fullPage .credits::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--white);
+  }
+  main section.credits-fullPage .credits::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #888;
+  }
+  main section.credits-fullPage .credits::-webkit-scrollbar-thumb:hover {
+    background-color: var(#555);
+  }
 }/*# sourceMappingURL=style.css.map */
