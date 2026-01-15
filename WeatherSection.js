@@ -2,6 +2,7 @@ function weatherSection() {
 
     let apiKey = "d60508e0f43c4eeb9c1123333261301";
 
+    let header = document.querySelector('header');
     let header1Time = document.querySelector('.header1 h2');
     let header1Date = document.querySelector('.header1 h4');
     let header1Location = document.querySelector('.header1 h3');
@@ -64,6 +65,27 @@ function weatherSection() {
         header1Date.innerHTML = `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
         header1Time.innerHTML =
             `${totalDaysOfWeek[date.getDay()]}, ${String(date.getHours()).padStart(2,"0")}:${String(date.getMinutes()).padStart(2,"0")}:${String(date.getSeconds()).padStart(2,"0")}`;
+        
+        // Morning background image :-
+        if(date.getHours() >= 6 && date.getHours() < 12){
+            header.style.backgroundImage = `url("https://plus.unsplash.com/premium_photo-1661963446332-d2b13bbafb8d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
+        }
+        // Afternoon background image :-
+        else if(date.getHours() >= 12 && date.getHours() < 16){
+            header.style.backgroundImage = `url("https://images.unsplash.com/photo-1762652847678-9971cfcad54d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
+            header.style.backgroundPositionY = '70%';
+        }
+        // Evening background image :-
+        else if(date.getHours() >= 16 && date.getHours() < 19){
+            header.style.backgroundImage = `url("https://images.unsplash.com/photo-1574014703905-34ccd5719bdd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
+            header.style.backgroundPositionY = '75%';
+            // background-position-y: 80%;
+        }
+        // Night background image :-
+        else{
+            header.style.backgroundImage = `url("https://images.unsplash.com/photo-1429892494097-cccc61109f58?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`
+            header.style.backgroundPositionY = '75%';
+        }
     }
 
     setInterval(dateAndTime, 1000);

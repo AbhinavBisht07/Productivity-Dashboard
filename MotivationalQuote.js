@@ -2,6 +2,7 @@
 // https://quoteslate.vercel.app/api/quotes/random?tags=motivation
 
 // https://quotes-api-self.vercel.app/quote
+// by Talha Udin Mohammed (https://github.com/well300/quotes-api)
 
 function motivational(){
     let motivationalQuote = document.querySelector(".motivation-2 p")

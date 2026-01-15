@@ -89,7 +89,7 @@ main section.allElems {
 main section.allElems header {
   width: 100%;
   background-image: url("https://images.unsplash.com/photo-1612151855475-877969f4a6cc?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-position: center;
+  background-position-y: center;
   background-size: cover;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -110,6 +110,7 @@ main section.allElems header .locationSearch input.locationInput {
   background-color: var(--pri);
   color: var(--sec);
   font-weight: 500;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.299);
 }
 main section.allElems header .locationSearch button.locationSubmitBtn {
   padding: 10px 20px;
@@ -122,11 +123,13 @@ main section.allElems header .locationSearch button.locationSubmitBtn {
   border-radius: 5px;
   border: none;
   outline: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.396);
   cursor: pointer;
   transition: 0.3s all ease;
 }
 main section.allElems header .locationSearch button.locationSubmitBtn:active {
   scale: 0.9;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
 }
 main section.allElems header .mainContent {
   margin-top: 40px;
@@ -136,29 +139,35 @@ main section.allElems header .mainContent {
 }
 main section.allElems header .mainContent .header1 h4 {
   font-size: 30px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
 }
 main section.allElems header .mainContent .header1 h2 {
   font-size: 80px;
   margin-bottom: 30px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
 }
 main section.allElems header .mainContent .header1 h3 {
   font-size: 40px;
   font-weight: 500;
-  opacity: 0.8;
+  opacity: 0.9;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
 }
 main section.allElems header .mainContent .header2 h2 {
   font-size: 60px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
 }
 main section.allElems header .mainContent .header2 h3 {
   font-size: 35px;
   font-weight: 500;
   margin-top: -5px;
   margin-bottom: 30px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
 }
 main section.allElems header .mainContent .header2 h4 {
   font-size: 20px;
   font-weight: 500;
   opacity: 0.8;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
 }
 main section.allElems .allFeatures {
   display: flex;
@@ -810,5 +819,59 @@ main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar-thum
   background-color: #888;
 }
 main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar-thumb:hover {
+  background-color: var(#555);
+}
+main section.credits-fullPage .credits {
+  background-color: var(--tri2);
+  height: 85%;
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 30px;
+  display: flex;
+  align-self: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+main section.credits-fullPage .credits .credit {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main section.credits-fullPage .credits .credit p {
+  font-weight: 700;
+  color: var(--tri1);
+  padding: 20px 45px 20px 45px;
+  width: 100%;
+  background-color: var(--sec);
+  color: var(--pri);
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  font-size: 25px;
+  outline: none;
+  line-height: 40px;
+}
+main section.credits-fullPage .credits .credit p a {
+  font-size: 30px;
+  color: var(--tri1);
+}
+main section.credits-fullPage .credits::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+main section.credits-fullPage .credits::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--white);
+}
+main section.credits-fullPage .credits::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #888;
+}
+main section.credits-fullPage .credits::-webkit-scrollbar-thumb:hover {
   background-color: var(#555);
 }/*# sourceMappingURL=style.css.map */

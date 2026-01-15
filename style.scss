@@ -117,7 +117,7 @@ main {
             width: 100%;
             // background-color: var(--tri2);
             background-image: url("https://images.unsplash.com/photo-1612151855475-877969f4a6cc?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-            background-position: center;
+            background-position-y: center;
             background-size: cover;
             margin-bottom: 20px;
             border-radius: 15px;
@@ -127,6 +127,7 @@ main {
                 display: flex;
                 gap: 5px;
                 flex-wrap: wrap;
+
                 input.locationInput {
                     width: 380px;
                     font-size: 20px;
@@ -137,6 +138,7 @@ main {
                     background-color: var(--pri);
                     color: var(--sec);
                     font-weight: 500;
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.299);
                 }
 
                 button.locationSubmitBtn {
@@ -149,12 +151,15 @@ main {
                     border-radius: 5px;
                     border: none;
                     outline: none;
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.396);
                     // margin-bottom: 20px;
                     cursor: pointer;
                     transition: 0.3s all ease;
                 }
-                button.locationSubmitBtn:active{
+
+                button.locationSubmitBtn:active {
                     scale: 0.9;
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
                 }
             }
 
@@ -167,23 +172,27 @@ main {
                 .header1 {
                     h4 {
                         font-size: 30px;
+                        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
                     }
 
                     h2 {
                         font-size: 80px;
                         margin-bottom: 30px;
+                        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
                     }
 
                     h3 {
                         font-size: 40px;
                         font-weight: 500;
-                        opacity: 0.8;
+                        opacity: 0.9;
+                        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
                     }
                 }
 
                 .header2 {
                     h2 {
                         font-size: 60px;
+                        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
                     }
 
                     h3 {
@@ -191,12 +200,14 @@ main {
                         font-weight: 500;
                         margin-top: -5px;
                         margin-bottom: 30px;
+                        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
                     }
 
                     h4 {
                         font-size: 20px;
                         font-weight: 500;
                         opacity: 0.8;
+                        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.508);
                     }
                 }
             }
@@ -607,17 +618,14 @@ main {
             width: 8px;
             height: 5px;
         }
-
         .day-planner::-webkit-scrollbar-track {
             border-radius: 10px;
             background-color: var(--white);
         }
-
         .day-planner::-webkit-scrollbar-thumb {
             border-radius: 10px;
             background-color: #888;
         }
-
         .day-planner::-webkit-scrollbar-thumb:hover {
             background-color: var(#555);
         }
@@ -1020,6 +1028,80 @@ main {
             .allGoals::-webkit-scrollbar-thumb:hover {
                 background-color: var(#555);
             }
+        }
+    }
+
+
+    section.credits-fullPage {
+        // display: block;
+
+        .credits {
+            background-color: var(--tri2);
+            height: 85%;
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            padding: 30px;
+            display: flex;
+            align-self: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            overflow: auto;
+
+            .credit {
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+                // align-items: flex-start;
+                // position: relative;
+                width: 100%;
+                // width: 49%;
+                height: fit-content;
+                // margin-bottom: 10px;
+
+                p {
+                    font-weight: 700;
+                    color: var(--tri1);
+                    padding: 20px 45px 20px 45px;
+                    width: 100%;
+                    background-color: var(--sec);
+                    color: var(--pri);
+                    font-weight: 700;
+                    border-radius: 5px;
+                    border: none;
+                    font-size: 25px;
+                    outline: none;
+
+                    line-height: 40px;
+
+                    a {
+                        font-size: 30px;
+                        color: var(--tri1);
+                        // text-decoration: none;
+                        // text-decoration-style: dashed ;
+                        // text-decoration-style: dotted ;
+                    }
+                }
+            }
+        }
+
+        .credits::-webkit-scrollbar {
+            width: 8px;
+            height: 5px;
+        }
+        .credits::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: var(--white);
+        }
+        .credits::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #888;
+        }
+        .credits::-webkit-scrollbar-thumb:hover {
+            background-color: var(#555);
         }
     }
 }

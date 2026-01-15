@@ -25,6 +25,15 @@ function OpenAndCloseFeatures() {
             allFullElemPages[elem.id].style.display = "none";
         })
     });
+    
+    
+    let creditsBtn = document.querySelector("nav .nav-in div .creditsBtn");
+    creditsBtn.addEventListener("click", function(){
+        allFullElemPages[allFullElemPages.length-1].style.display = "block";
+    })
+    backBtns[allFullElemPages.length-1].addEventListener("click", function () {
+        allFullElemPages[allFullElemPages.length-1].style.display = "none";
+    })
 }
 OpenAndCloseFeatures();
 
