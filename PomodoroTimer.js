@@ -53,7 +53,7 @@ function pomodoroTimer() {
                     session.innerHTML = "Little Break";
                     session.style.backgroundColor = 'var(--darkBlue)';
                 }
-            }, 1);
+            }, 1000);
         }
         else{
             timerInterval = setInterval(() => {
@@ -69,7 +69,7 @@ function pomodoroTimer() {
                     session.innerHTML = "Work Session";
                     session.style.backgroundColor = 'var(--darkGreen)';
                 }
-            }, 1);
+            }, 1000);
         }
 
 
