@@ -814,6 +814,10 @@ main section.daily-goals-fullPage .daily-goals .allGoals .goal div div button:ac
 }
 main section.daily-goals-fullPage .daily-goals .allGoals .goal div div .removeBtn {
   background-color: var(--red);
+  transition: 0.1s all ease;
+}
+main section.daily-goals-fullPage .daily-goals .allGoals .goal div div .removeBtn:active {
+  scale: 0.85;
 }
 main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar {
   width: 8px;

@@ -1006,13 +1006,17 @@ main {
                                 cursor: pointer;
                                 transition: 0.3s all ease;
                             }
-
+                            
                             button:active {
                                 scale: 0.7;
                             }
-
+                            
                             .removeBtn {
                                 background-color: var(--red);
+                                transition: 0.1s all ease;
+                            }
+                            .removeBtn:active{
+                                scale: 0.85;
                             }
                         }
                     }
