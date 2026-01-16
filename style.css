@@ -818,7 +818,7 @@ main section.daily-goals-fullPage .daily-goals .allGoals .goal div div .removeBt
   transition: 0.1s all ease;
 }
 main section.daily-goals-fullPage .daily-goals .allGoals .goal div div .removeBtn:active {
-  scale: 0.85;
+  scale: 0.95;
 }
 main section.daily-goals-fullPage .daily-goals .allGoals::-webkit-scrollbar {
   width: 8px;
